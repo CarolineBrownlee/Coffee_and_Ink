@@ -2,10 +2,14 @@ import React from "react"
 import "./coffee_and_ink.css"
 import { Coffee } from "./coffee/coffee"
 import { Journal } from "./journal/journal"
+// import typewriterImage from "./typewriterImage.jpg"
 
 export const Coffee_and_Ink = () => (
     <>
-        <h2>Coffee and Ink</h2>
+        <header >
+            <h2 id="title" style={{ font:'bold' }}>Coffee and Ink</h2>
+            {/* <img className="typewriterImg" src={typewriterImage} /> */}
+        </header>
         <div>
             <h2>Coffee</h2>
             <article className="coffee">

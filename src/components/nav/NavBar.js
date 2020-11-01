@@ -6,7 +6,7 @@ import "./NavBar.css"
 export const NavBar = () => {
     return (
         <>
-            <h2 id="title" style={{ font: 'bold' }}>( coffee & ink )</h2>
+            <h2 id="title" style={{ font: 'bold' }}>coffee & ink</h2>
             {/* <img className="paper" style={{ width: '100%' }} src={paper} /> */}
             <section className="navListBorder">
                 <ul className="navbar" style={{ textDecoration: 'none' }}>

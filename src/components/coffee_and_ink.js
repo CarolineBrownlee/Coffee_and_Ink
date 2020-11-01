@@ -2,17 +2,17 @@ import React from "react"
 import "./coffee_and_ink.css"
 import { Coffee } from "./coffee/coffee"
 import { Journal } from "./journal/journal"
-import paperImage from "./paper.jpg"
+import profileImg from "./nav/profileImage.jpg"
 import { NavBar } from "./nav/NavBar"
 
 export const Coffee_and_Ink = () => (
     <>
         <article>
             <div >
-                {/* <h2 id="title" style={{ font:'bold' }}>Coffee and Ink</h2> */}
-                {/* <img className="paperImage" style={{width:'100%'}} src={paperImage} /> */}
                 <NavBar />
             </div>
+            
+            <img className="profileImg" style={{ width: '30%' }} src={profileImg} />
             {/* <img className="paperImage" style={{width:'100%'}} src={paperImage} /> */}
             {/* <section className="paperBorder">
                 <div className="coffee">

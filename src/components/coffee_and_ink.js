@@ -2,30 +2,32 @@ import React from "react"
 import "./coffee_and_ink.css"
 import { Coffee } from "./coffee/coffee"
 import { Journal } from "./journal/journal"
-// import typewriterImage from "./typewriterImage.jpg"
+import paperImage from "./paper.jpg"
+import { NavBar } from "./nav/NavBar"
 
 export const Coffee_and_Ink = () => (
     <>
-        <header >
-            <h2 id="title" style={{ font:'bold' }}>Coffee and Ink</h2>
-            {/* <img className="typewriterImg" src={typewriterImage} /> */}
-        </header>
-        <div>
-            <h2>Coffee</h2>
-            <article className="coffee">
-                <Coffee />
-                <Coffee />
-                <Coffee />
-            </article>
-        </div>
-        <div>
-            <p>Ink</p>
-            <h2>Journal Entries</h2>
-            <article className="journal">
-                <Journal />
-                <Journal />
-                <Journal />
-            </article>
-        </div>
+        <article>
+            <div >
+                {/* <h2 id="title" style={{ font:'bold' }}>Coffee and Ink</h2> */}
+                {/* <img className="paperImage" style={{width:'100%'}} src={paperImage} /> */}
+                <NavBar />
+            </div>
+            {/* <img className="paperImage" style={{width:'100%'}} src={paperImage} /> */}
+            {/* <section className="paperBorder">
+                <div className="coffee">
+                    <h2>Coffee</h2>
+                    <div>
+                        <Coffee />
+                    </div>
+                </div>
+                <div className="journal">
+                    <h2>Journal</h2>
+                    <div>
+                        <Journal />
+                    </div>
+                </div>
+            </section> */}
+        </article>
     </>
 )

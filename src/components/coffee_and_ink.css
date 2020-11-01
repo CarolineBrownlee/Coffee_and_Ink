@@ -1,24 +1,3 @@
-
-html {
-    margin: 0;
-    background-color: white;
-}
-
-
-
-header {
-    height: 300px;
-    width: 100%;
-    background-image: url("typewriterImage.jpg");
-    background-size: 100%;
-    background-position: center;
-    opacity: .5;
-}
-
-#title {
-    text-emphasis: bold;
-}
-
 .profileImg {
     width: 15%;
     border-radius: 100px;
@@ -26,22 +5,28 @@ header {
     margin: 0 auto;
 }
 
-h2 {
-    text-align: center;
-    text-shadow: 0 0 3px #4e878b, 0 0 5px #9f6e4a;
-    padding-top: 13px;
+    article {
+        background-image: url("./paper.jpg");
+    }
+
+.paperBorder {
+    background-color: white;
+    background-image: url("./paper.jpg");   
 }
 
 .coffee {
-    text-align: center;
-    text-shadow: 0 0 3px #4e878b, 0 0 5px #9f6e4a;
+
+
     padding-top: 13px;
+     
+
 }
 
 .journal {
-    text-align: center;
-    text-shadow: 0 0 3px #4e878b, 0 0 5px #9f6e4a;
+  
+ 
     padding-top: 13px;
+    background-color: white;
 }
 
 .scrabbleLetter {
@@ -69,12 +54,6 @@ label {
 .date {
     font-family: 'Courier New', Courier, monospace;
 }
-
-/* .typewriterImg {
-    width: 50%;
-    opacity: .5;
-    margin-top: 5px;
-} */
 
 #mood {
     font-family: 'Courier New', Courier, monospace;

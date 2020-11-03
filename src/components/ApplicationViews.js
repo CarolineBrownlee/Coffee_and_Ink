@@ -1,33 +1,34 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { CoffeeProvider } from "./coffee/CoffeeProvider"
-// import { Home } from "./home/homepage"
+import { Home } from "./home/homepage"
 import { CoffeeBar } from "./coffee/CoffeeBar"
-// import { AnimalList } from "./animal/AnimalList"
+import { JournalProvider} from "./journal/JournalProvider"
+import { Journal } from "./journal/Journal"
+import { StoryNotesProvider } from "./storyNotes/StoryNotesProvider"
+import { StoryNotes } from "./storyNotes/StoryNotes"
 
 export const ApplicationViews = (props) => {
     return (
         <>
+            <Route exact path="/">
+                <Home />
+            </Route>
             <CoffeeProvider>
-                {/* Render the location list when http://localhost:3000/ */}
-                <Route exact path="/coffee">
+                <Route path="/coffee">
                     <CoffeeBar />
                 </Route>
             </CoffeeProvider>
-
-            <CoffeeProvider>
-                {/* Render the location list when http://localhost:3000/ */}
-                <Route exact path="/coffee">
-                    <CoffeeBar />
-                </Route>
-            </CoffeeProvider>
-
-            {/* <AnimalProvider> */}
-                {/* Render the animal list when http://localhost:3000/animals */}
-                {/* <Route path="/animals">
-                    <AnimalList />
-                </Route>
-            </AnimalProvider> */}
+            <JournalProvider>
+                <Route path="/journal">
+                    <Journal />
+                </Route>  
+            </JournalProvider>
+            <StoryNotesProvider>
+                <Route path="/storynotes">
+                    <StoryNotes />
+                </Route>  
+            </StoryNotesProvider>
         </>
     )
 }

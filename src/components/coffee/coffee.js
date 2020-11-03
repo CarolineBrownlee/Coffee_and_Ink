@@ -1,9 +1,9 @@
 import React from "react"
 import "./coffee.css"
 
-export const Coffee = () => (
+export const Coffee = ({coffee}) => (
     <section className="coffee">
-        <h3 className="coffee__type">Espresso</h3>
-        <div className="coffee__name">Mocha</div>
+        <h3 className="coffee__name">{coffee.name}</h3>
+        <div className="coffee__type">{coffee.type}</div>
     </section>
 )

@@ -1,0 +1,36 @@
+{
+    "coffee": [
+        {
+            "id": 1,
+            "name": "Mocha",
+            "type": "espresso"
+        }
+    ],
+    "journal": [
+        {
+            "id": 1,
+            "title": "November",
+            "date": "November 3, 2020",
+            "content": "This is the third day of November. Election day!"
+        }
+    ],
+    "story notes": [
+        {
+            "id": 1,
+            "sprint": 113,
+            "story number": 36873,
+            "technologies": "react and CSharp",
+            "description": "converting the micro UI",
+            "notes": "today I worked on a UI task to add disable a button for sleep nurses..."
+        }
+    ],
+    "cool links": [
+        {
+            "id": 1,
+            "title": "Atomic Design",
+            "subject": "Architecture and Design",
+            "author": "Brad Frost",
+            "url": "https://atomicdesign.bradfrost.com/chapter-2/"
+        }
+    ]
+}

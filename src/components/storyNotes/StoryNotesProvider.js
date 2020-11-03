@@ -6,29 +6,29 @@ import React, { useState, useEffect } from "react"
     The context is imported and used by individual components
     that need data
 */
-export const CoffeeContext = React.createContext()
+export const StoryNotesContext = React.createContext()
 
 /*
  This component establishes what data can be used.
  */
-export const CoffeeProvider = (props) => {
-    const [coffees, setCoffeeBar] = useState([])
+export const StoryNotesProvider = (props) => {
+    const [notes, setStoryNotes] = useState([])
 
-    const getCoffeeBar = () => {
-        return fetch("http://localhost:8088/coffee")
+    const getStoryNotes = () => {
+        return fetch("http://localhost:8088/storynotes")
             .then(res => res.json())
-            .then(setCoffeeBar)
+            .then(setStoryNotes)
     }
 
-    const addCoffee = coffee => {
-        return fetch("http://localhost:8088/coffee", {
+    const addStoryNotes = notes => {
+        return fetch("http://localhost:8088/storynotes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(coffee)
+            body: JSON.stringify(notes)
         })
-            .then(getCoffeeBar)
+            .then(getStoryNotes)
     }
 
     /*
@@ -38,10 +38,10 @@ export const CoffeeProvider = (props) => {
         allows any child elements to access them.
     */
     return (
-        <CoffeeContext.Provider value={{
-            coffees, addCoffee, getCoffeeBar
+        <StoryNotesContext.Provider value={{
+            notes, addStoryNotes, getStoryNotes
         }}>
             {props.children}
-        </CoffeeContext.Provider>
+        </StoryNotesContext.Provider>
     )
 }

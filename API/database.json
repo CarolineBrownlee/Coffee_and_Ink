@@ -14,11 +14,11 @@
             "content": "This is the third day of November. Election day!"
         }
     ],
-    "story notes": [
+    "storynotes": [
         {
             "id": 1,
             "sprint": 113,
-            "story number": 36873,
+            "storynumber": 36873,
             "technologies": "react and CSharp",
             "description": "converting the micro UI",
             "notes": "today I worked on a UI task to add disable a button for sleep nurses..."

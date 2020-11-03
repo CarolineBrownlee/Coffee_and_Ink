@@ -1,3 +1,5 @@
+//component for setting the state of coffees in database and listing them
+
 import React, { useContext, useEffect } from "react"
 import { CoffeeContext } from "./CoffeeProvider"
 import { Coffee } from "./coffee"

@@ -1,13 +1,13 @@
 //component for setting the state of journal entries in the database and listing them
 
 import React, { useContext, useEffect } from "react"
-import { JournalContext } from "./JournalProvider"
-import { JournalEntry } from "./entry"
-import "./journal.css"
+import { StoryNotesContext } from "./StoryNotesProvider"
+import { Note } from "./note"
+// import "./notes.css"
 
-export const Journal = () => {
+export const StoryNotes = () => {
     // This state changes when `getLocations()` is invoked below
-    const { entries, getJournal } = useContext(JournalContext)
+    const { notes, getStoryNotes } = useContext(StoryNotesContext)
 
     /*
         What's the effect this is reponding to? Component was
@@ -15,8 +15,8 @@ export const Journal = () => {
         then gets the data, then re-renders.
     */
     useEffect(() => {
-        console.log("Journal: Initial render before data")
-        getJournal()
+        console.log("StoryNotes: Initial render before data")
+        getStoryNotes()
     }, [])
 
     /*
@@ -24,14 +24,14 @@ export const Journal = () => {
         it is responding to is that the location state changed.
     */
     useEffect(() => {
-        console.log("Journal: Journal state changed")
-        console.log(entries)
-    }, [entries])
+        console.log("StoryNotes: StoryNotes state changed")
+        console.log(notes)
+    }, [notes])
 
     return (
-        <div className="entries">
+        <div className="notes">
         {
-            entries.map(entry => <JournalEntry key={entry.id} entry={entry} />)
+            notes.map(note => <Note key={note.id} storynote={note} />)
         }
         </div>
     )

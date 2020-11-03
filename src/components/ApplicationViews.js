@@ -1,26 +1,33 @@
-// import React from "react"
-// import { Route } from "react-router-dom"
-// import { LocationProvider } from "./location/LocationProvider"
-// import { AnimalProvider } from "./animal/AnimalProvider"
-// import { LocationList } from "./location/LocationList"
+import React from "react"
+import { Route } from "react-router-dom"
+import { CoffeeProvider } from "./coffee/CoffeeProvider"
+// import { Home } from "./home/homepage"
+import { CoffeeBar } from "./coffee/CoffeeBar"
 // import { AnimalList } from "./animal/AnimalList"
 
-// export const ApplicationViews = (props) => {
-//     return (
-//         <>
-//             <LocationProvider>
-//                 {/* Render the location list when http://localhost:3000/ */}
-//                 <Route exact path="/">
-//                     <LocationList />
-//                 </Route>
-//             </LocationProvider>
+export const ApplicationViews = (props) => {
+    return (
+        <>
+            <CoffeeProvider>
+                {/* Render the location list when http://localhost:3000/ */}
+                <Route exact path="/coffee">
+                    <CoffeeBar />
+                </Route>
+            </CoffeeProvider>
 
-//             <AnimalProvider>
-//                 {/* Render the animal list when http://localhost:3000/animals */}
-//                 <Route path="/animals">
-//                     <AnimalList />
-//                 </Route>
-//             </AnimalProvider>
-//         </>
-//     )
-// }
+            <CoffeeProvider>
+                {/* Render the location list when http://localhost:3000/ */}
+                <Route exact path="/coffee">
+                    <CoffeeBar />
+                </Route>
+            </CoffeeProvider>
+
+            {/* <AnimalProvider> */}
+                {/* Render the animal list when http://localhost:3000/animals */}
+                {/* <Route path="/animals">
+                    <AnimalList />
+                </Route>
+            </AnimalProvider> */}
+        </>
+    )
+}
